@@ -7,8 +7,6 @@
     ------------------------------------------------------------------------------ 
 
 
-React Boilerplate.
+React To Do.
 
-A simple React boilerplate for developing with React.
-
-Version 2: With testing and scss modules.
+A simple React to do app.
