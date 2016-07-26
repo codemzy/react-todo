@@ -8,6 +8,8 @@ class TodoForm extends React.Component {
        if (text.length > 0) {
            this.props.onAdd(text);
            this.refs.text.value = "";
+       } else {
+           this.refs.text.focus();
        }
     }
     
