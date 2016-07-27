@@ -21,7 +21,11 @@ class TodoApp extends React.Component {
     }
     
     _handleAddTodo(text) {
-        var newID = this.state.todos[this.state.todos.length-1].id + 1;
+        var lastID = 0;
+        if (this.state.todos.length > 0) {
+            lastID = this.state.todos[this.state.todos.length-1].id;
+        }
+        var newID = lastID + 1;
         console.log(newID);
         this.setState({
             todos: [
