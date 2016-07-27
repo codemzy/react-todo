@@ -1,4 +1,5 @@
 var React = require('react');
+var moment = require('moment');
 
 // components
 var TodoList = require('./TodoList.js');
@@ -31,7 +32,7 @@ class TodoApp extends React.Component {
         this.setState({
             todos: [
             ...this.state.todos,
-            { id: newID, text: text, completed: false }
+            { id: newID, text: text, completed: false, createdAt: moment().unix() }
             ]
         });
     }
