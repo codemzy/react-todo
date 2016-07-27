@@ -42,4 +42,20 @@ describe('TodoAPI', () => {
         });
     });
     
+    describe('filterTodos', () => {
+        var todosArr = [
+            {id: 1, text: 'test todo', completed: true},
+            {id: 2, text: 'test todo', completed: false},
+            {id: 3, text: 'test todo', completed: true}
+        ];
+        it('should return all items if showCompleted is true', () => {
+            var filteredTodos = TodoAPI.filterTodos(todosArr, true, '');
+            expect(filteredTodos.length).toBe(3);
+        });
+        it('should return only uncompleted items if showCompleted is false', () => {
+            var filteredTodos = TodoAPI.filterTodos(todosArr, false, '');
+            expect(filteredTodos.length).toBe(1);
+        });
+    });
+    
 });
