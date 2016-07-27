@@ -32,7 +32,7 @@ class TodoApp extends React.Component {
         this.setState({
             todos: [
             ...this.state.todos,
-            { id: newID, text: text, completed: false, createdAt: moment().unix() }
+            { id: newID, text: text, completed: false, createdAt: moment().unix(), completedAt: false }
             ]
         });
     }
@@ -48,6 +48,7 @@ class TodoApp extends React.Component {
         var updatedTodos = this.state.todos.map(function(todo) {
             if (todo.id === id) {
                 todo.completed = !todo.completed;
+                todo.completedAt = todo.completed ? moment().unix() : false;
             }
             return todo;
         });

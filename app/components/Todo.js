@@ -6,6 +6,10 @@ class Todo extends React.Component {
         var renderDate = () => {
             var message = 'Created ';
             var timestamp = this.props.createdAt;
+            if (this.props.completed) {
+                message = 'Completed ';
+                timestamp = this.props.completedAt;
+            }
             return message + moment.unix(timestamp).format('MMM Do YYYY @ h:mm a');
         };
         return (
