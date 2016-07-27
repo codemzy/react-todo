@@ -5,19 +5,21 @@ var TodoList = require('./TodoList.js');
 var TodoForm = require('./TodoForm.js');
 var TodoSearch = require('./TodoSearch.js');
 
+// api
+var TodoAPI = require('../api/TodoAPI.js');
+
 class TodoApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             showCompleted: false,
             searchText: '',
-            todos: [
-                { id: 1, text: 'Walk the dog', completed: false },
-                { id: 2, text: 'Clean the car', completed: true },
-                { id: 3, text: 'Build an app', completed: false },
-                { id: 4, text: 'Make some lunch', completed: false }
-            ]
+            todos: TodoAPI.getTodos()
         };
+    }
+    
+    componentDidUpdate() {
+        TodoAPI.setTodos(this.state.todos);
     }
     
     _handleAddTodo(text) {
