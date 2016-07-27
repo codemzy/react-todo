@@ -21,5 +21,9 @@ module.exports = {
         } else {
             return [];
         }
+    },
+    filterTodos: function(todos, showCompleted, searchText) {
+        var filteredTodos = todos;
+        return filteredTodos;
     }
 };
