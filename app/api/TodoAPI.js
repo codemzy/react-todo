@@ -32,7 +32,17 @@ module.exports = {
         
         // filter by searchText
         
-        // Sort todos with none-completed first
+        // Sort todos with none-completed first at the start of the array
+        filteredTodos.sort((a, b) => {
+            if (a.completed === false && b.completed === true) {
+                return -1;
+            } else if (a.completed === true && b.completed === false) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+        // return the filteredTodos
         return filteredTodos;
     }
 };
