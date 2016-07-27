@@ -28,7 +28,6 @@ class TodoApp extends React.Component {
             lastID = this.state.todos[this.state.todos.length-1].id;
         }
         var newID = lastID + 1;
-        console.log(newID);
         this.setState({
             todos: [
             ...this.state.todos,
@@ -54,7 +53,6 @@ class TodoApp extends React.Component {
         this.setState({
             todos: updatedTodos
         });
-        console.log(id);
     }
     
     render() {
