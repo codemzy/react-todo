@@ -21,7 +21,14 @@ class TodoApp extends React.Component {
     }
     
     _handleAddTodo(text) {
-        console.log('new todo: ' + text);
+        var newID = this.state.todos[this.state.todos.length-1].id + 1;
+        console.log(newID);
+        this.setState({
+            todos: [
+            ...this.state.todos,
+            { id: newID, text: text }
+            ]
+        });
     }
     
     _handleSearch(showCompleted, searchText) {
