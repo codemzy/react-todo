@@ -4,7 +4,7 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 // Components
 var Main = require('../components/Main');
-var About = require('../components/MainComponent');
+var About = require('../components/About');
 var TodoApp = require('../components/TodoApp');
 
 // Routes
