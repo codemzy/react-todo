@@ -11,14 +11,16 @@ class TodoSearch extends React.Component {
     render() {
         return (
             <div className="todowrap__header">
-                <div>
-                    <input type="search" className="todo-search-input" placeholder="Search..." ref="searchText" onChange={this._handleSearch.bind(this)} />
-                </div>
-                <div>
-                    <label>
-                        <input type="checkbox" ref="showCompleted" onChange={this._handleSearch.bind(this)} />
-                        Show completed todos
-                    </label>
+                <div className="row">
+                    <div className="small-10 columns">
+                        <input type="search" className="todo-search-input" placeholder="Search..." ref="searchText" onChange={this._handleSearch.bind(this)} />
+                    </div>
+                    <div className="small-2 columns">
+                        <label className="my-switch">
+                          <input type="checkbox" ref="showCompleted" onChange={this._handleSearch.bind(this)} />
+                          <div className="my-slider"></div>
+                        </label>
+                    </div>
                 </div>
             </div>
         );

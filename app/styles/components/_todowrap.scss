@@ -3,16 +3,11 @@
 }
 
 .todowrap__header {
-    background: $link-color;
+    background: $search-bg;
     background-size: 16px 16px;
     border-radius: 6px 6px 0 0;
     color: $bg1;
     padding: 19px 25px 20px;
-    label {
-        cursor: pointer;
-        margin-top: 10px;
-        margin-bottom: -10px;
-    }
 }
 
 .todowrap__footer {
