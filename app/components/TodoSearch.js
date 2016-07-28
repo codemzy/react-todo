@@ -12,10 +12,10 @@ class TodoSearch extends React.Component {
         return (
             <div className="todowrap__header">
                 <div className="row">
-                    <div className="small-10 columns">
+                    <div className="small-9 columns">
                         <input type="search" className="todo-search-input" placeholder="Search..." ref="searchText" onChange={this._handleSearch.bind(this)} />
                     </div>
-                    <div className="small-2 columns">
+                    <div className="small-3 columns text-right">
                         <label className="my-switch">
                           <input type="checkbox" ref="showCompleted" onChange={this._handleSearch.bind(this)} />
                           <div className="my-slider"></div>
