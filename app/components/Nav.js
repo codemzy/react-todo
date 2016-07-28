@@ -8,9 +8,9 @@ class Nav extends React.Component {
             <div className="top-bar">
               <div className="top-bar-left">
                     <ul className="menu">
-                    <li className="menu-text"><IndexLink to="/" activeClassName="active">React Boilerplate</IndexLink></li>
+                    <li className="menu-text"><IndexLink to="/" activeClassName="active">ToDoTiger</IndexLink></li>
                       <li>
-                        <Link to="/one" activeClassName="active">One</Link>
+                        <Link to="/about" activeClassName="active">About</Link>
                       </li>
                     </ul>
               </div>
