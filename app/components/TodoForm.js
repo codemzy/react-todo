@@ -17,7 +17,7 @@ class TodoForm extends React.Component {
         return (
             <div className="todowrap__footer">
                 <form ref="form" onSubmit={this._onSubmitAdd.bind(this)}>
-                    <input type="text" placeholder="To do..." ref="text" />
+                    <input type="text" className="todo-form-input" placeholder="What would you like to do?" ref="text" />
                     <button className="button expanded">Add</button>
                 </form>
             </div>

@@ -10,7 +10,8 @@ class TodoList extends React.Component {
             if (todos.length === 0) {
                 return (
                     <div className="todo-nomessage">
-                        <p className="todo-name">To-do not found.</p>
+                        <p className="todo-name">No tasks found.</p>
+                        <p>Add a task using the form below, or switch the toggle above to see completed tasks.</p>
                     </div>
                 );
             }
