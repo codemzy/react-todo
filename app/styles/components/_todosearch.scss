@@ -1,0 +1,21 @@
+input[type="search"], input[type=search] {
+    -webkit-appearance: none !important;
+}
+
+.todo-search-input, .todo-search-input:focus {
+    background: $link-color;
+    border: none;
+    color: $bg1;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 23px;
+    padding: 5px 0;
+    text-indent: 0;
+    box-shadow: none;
+    outline: none;
+}
+
+.todo-search-input::-webkit-input-placeholder {
+    color: $bg1;
+}

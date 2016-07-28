@@ -10,9 +10,9 @@ class TodoSearch extends React.Component {
     
     render() {
         return (
-            <div>
+            <div className="todowrap__header">
                 <div>
-                    <input type="search" placeholder="Search..." ref="searchText" onChange={this._handleSearch.bind(this)} />
+                    <input type="search" className="todo-search-input" placeholder="Search..." ref="searchText" onChange={this._handleSearch.bind(this)} />
                 </div>
                 <div>
                     <label>
