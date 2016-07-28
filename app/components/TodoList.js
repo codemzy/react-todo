@@ -9,7 +9,7 @@ class TodoList extends React.Component {
         var renderTodos = () => {
             if (todos.length === 0) {
                 return (
-                    <div>
+                    <div className="notodo-message">
                         <p>Nothing to do.</p>
                     </div>
                 );
