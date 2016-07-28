@@ -62,7 +62,7 @@ class TodoApp extends React.Component {
         let filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
         return (
             <div>
-                <h1 className="page-title">To-do Tiger</h1>
+                <img className="float-center" src="/img/todotiger.png" alt="todo tiger" />
                 <div className="todowrap">
                     <TodoSearch onSearch={this._handleSearch.bind(this)} />
                     <TodoList todos={filteredTodos} onToggle={this._handleToggle.bind(this)} />
